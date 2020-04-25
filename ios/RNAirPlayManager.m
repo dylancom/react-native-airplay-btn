@@ -16,7 +16,16 @@ RCT_EXPORT_MODULE();
 
     MPVolumeView *volumeView = [[MPVolumeView alloc] init];
     volumeView.showsVolumeSlider = false;
-
+    for( UIView *wnd in volumeView.subviews ) {
+        if( [wnd isKindOfClass:[UIButton class] ]) {
+            UIButton *button = (UIButton*) wnd;
+            UIImage *img = button.currentImage;
+            UIImage *img2 = [img imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+            [volumeView setRouteButtonImage: img2 forState:UIControlStateNormal];
+            break;
+        }
+    }
+    
     return volumeView;
 
 }
