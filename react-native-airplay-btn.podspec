@@ -1,6 +1,6 @@
 
 Pod::Spec.new do |s|
-  s.name         = "RNAirplay"
+  s.name         = "react-native-airplay-btn"
   s.version      = "1.0.0"
   s.summary      = "RNAirplay"
   s.homepage     = "https://github.com/dylancom/react-native-airplay-btn"
